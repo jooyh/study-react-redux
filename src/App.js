@@ -4,7 +4,11 @@ import DisplayNumberRoot from "./components/DisplayNumberRoot"
 import AddNumberRoot from "./components/AddNumberRoot"
 
 class App extends Component {
-  state = { number: 0 }
+  constructor(props) {
+    super(props)
+    this.state = { number: 0 }
+  }
+
   render() {
     return (
       <div className="App">
