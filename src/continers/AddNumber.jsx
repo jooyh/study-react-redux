@@ -1,15 +1,11 @@
-import AddNumberOrg from "../components/AddNumber"
-import React, { Component } from "react"
-import store from "../store"
+import AddNumber from "../components/AddNumber"
+import { connect } from "react-redux"
 
-export default class AddNumber extends Component {
-  render() {
-    return (
-      <AddNumberOrg
-        onClick={function (_size) {
-          store.dispatch({ type: "INCREMENT", size: _size })
-        }.bind(this)}
-      ></AddNumberOrg>
-    )
+function mapReduxDispatchToReactProps(dispatch) {
+  return {
+    onClick: function (size) {
+      dispatch({ type: "INCREMENT", size: size })
+    },
   }
 }
+export default connect(null, mapReduxDispatchToReactProps)(AddNumber)
