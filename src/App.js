@@ -10,11 +10,13 @@ class App extends Component {
       <div className="App">
         <h1>ROOT</h1>
         <AddNumberRoot
-          onClick={function (size) {
-            this.setState({ number: this.state.number + size })
-          }.bind(this)}
+        // onClick={function (size) {
+        //   this.setState({ number: this.state.number + size })
+        // }.bind(this)}
         ></AddNumberRoot>
-        <DisplayNumberRoot number={this.state.number}></DisplayNumberRoot>
+        <DisplayNumberRoot
+        // number={this.state.number}
+        ></DisplayNumberRoot>
       </div>
     )
   }
